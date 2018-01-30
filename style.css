@@ -1,0 +1,30 @@
+
+body 
+{
+  	background: url(bg.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;*/
+  	/*-moz-background-size: cover;*/
+  	/*background-size: cover;*/
+}
+
+h1 {
+	color: #282724;
+	font-size:50px;
+}
+
+h2 {
+	color: #282724;
+	font-size: 18px;
+}
+
+.bio {
+	color: #f9f5a4;
+}
+
+.me {
+	height: 150px;
+	border-radius: 45%;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+}
