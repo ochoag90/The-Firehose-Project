@@ -4,11 +4,22 @@
 	<title> Gabe's BIO</title>
 
 	<link rel="stylesheet" type="text/css" href="style.css">
-
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+
+	 <link
+    rel="stylesheet"
+    href="prism-atom-dark.css"
+    type="text/css"
+    media="screen"
+  />
+
+  <script type="text/javascript" src="prism.js"></script>
+  <script type="text/javascript" src="prism.ruby.js"></script>
+
 
 </head>
 <body>
+	<div class = "about-container">
 		<div class="about">
 
 		<img src="me.jpg" class = "me" />
@@ -25,5 +36,222 @@
 			I am a Mechanical Engineer, graduatedraduated from WIT in Boston, MA. I have 5 years of experience on the field of manufacturing. My specialty is mold design, cnc programming, FEA analysis, data analytics, and marketing. I have many hobbies, which mostly consist of physical activities. I love to snowboard in the Northeast, ride my bike for long distances, rock climb with friends, and push myself to exhaustion. I love pushing through the mental and physical aspects I face when I do any of these activities. It helps me feel more aware of myself and my surroundings, giving myself a deep look into the mechanics of the activity I am doing. This in turn helps me improve.
 		</p>
 		</div>
+	</div>
+
+	<h3>Code Snippets</h3>
+
+	 <!-- Code Snippets Section -->
+
+	<hr class = "green">
+	<br>
+
+	<!-- First set of boxes -->
+
+	<div class = "box">
+		<h4>Celcius to Fahrenheit Calculator</h4>
+		<p>
+			This ruby program will prompt the user for a temperature in degrees celcius and convert it to degrees Fahrenheit.
+		</p>
+	</div>
+
+	<div class = "box">
+		<pre><code class="language-ruby"> puts &quot;To convert from Celcius to Fahrenheit please enter degrees in Celcius: &quot;
+		celcius = gets.to_f
+
+		def conversion(c)
+  
+  		return (c * 1.8) + 32
+  
+		end 
+
+		puts &quot;#{celcius} degrees Celcius is equal to #{conversion(celcius).to_f} degrees Fahrenheit.&quot;
+		</pre></code>
+	</div>
+
+	<br class = "clear">
+
+	<!-- Second set of boxes -->
+
+	<div class = "box">
+		<pre><code class="language-ruby"> 
+puts &quot;Please enter a number:&quot;
+	input = gets.to_i
+
+	def make_ordinal(user_input)
+   		num2 = user_input % 10
+   			if (user_input  &lt; 10 || user_input &gt; 20) &amp;&amp; num2 == 1 
+       			puts &quot;Your number in ordinal notation is #{user_input}st&quot;
+    		elsif (user_input &gt; 10 &amp;&amp; user_input &lt; 20) &amp;&amp; num2 == 1
+      			puts &quot;Your number is the #{user_input}th&quot;   
+    		elsif (user_input &gt; 10 &amp;&amp; user_input &lt; 20) &amp;&amp; num2 == 2
+       			puts &quot;Your number is the #{user_input}th&quot;  
+    		elsif (user_input &gt; 10 &amp;&amp; user_input &lt; 20) &amp;&amp; num2 == 3
+    			puts &quot;Your number is the #{user_input}th&quot;  
+    		elsif num2 == 2
+    			puts &quot;Your number in ordinal notation is #{user_input}nd&quot;
+    		elsif num2 == 3
+    			puts &quot;Your number in ordinal notation is #{user_input}rd&quot;
+    		elsif num2 == 0 || num2 &gt; 3 
+    			puts &quot;Your number in ordinal notation is #{user_input}th&quot;
+    		end 
+  	end 
+
+	make_ordinal(input) 
+		</code></pre>
+	</div>
+
+	<div class = "box">
+		<h4>Ordinal Challenge</h4>
+		<p>
+			This ruby program will convert a plain number to the ordinal of the number. For example: If the user enters 2, it will display 2nd, if the user enters 3, it will display 3rd, etc.
+		</p>
+	</div>
+
+	<br class = "clear">
+
+	<!-- Third set of boxes -->
+
+	<div class = "box">
+		<h4>Foobar</h4>
+		<p>
+			This ruby program is an adaption of a classical technical interview problem which displays sequences of the Foobar pattern.
+		</p>
+	</div>
+
+	<div class = "box">
+		<pre><code class="language-ruby"> 
+puts &quot;How many digits of the foobar pattern, would you like to see? Please enter a number:&quot;
+number_of_digits = gets.chomp.to_i
+
+	def foobar_pattern(digits)
+    digits.times do |iterate|
+      if iterate == 0
+        #do nothing        
+      elsif iterate % 3 == 0 &amp;&amp; iterate % 5 == 0
+        puts &quot;foobar&quot;
+      elsif iterate % 5 == 0
+        puts &quot;bar&quot;
+      elsif iterate % 3 == 0
+        puts &quot;foo&quot;
+      #elsif iterate % 3 == 1 || iterate % 5 == 1
+        #puts iterate 
+      #elsif iterate % 3 == 2 || iterate % 5 == 2
+        #puts iterate
+      else puts iterate
+      end 
+    end
+end
+display = foobar_pattern(number_of_digits)
+puts display 
+</code></pre>
+        
+	</div>
+
+	<br class = "clear">
+
+
+	<h3>Web Apps</h3>
+	<hr class = "green">
+
+	<div class = "box">
+		<h4>Quote Generator</h4>
+		<img src = "C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\splurty.png" class = "full-width"/>
+		<p>
+			A database-powered quote generator with a mobile-first design,
+			using the ruby on Rails framework, HTML, and CSS. Uses Git and
+			Github for version control, and launched on Heroku.
+		</p>
+	</div>
+
+	 <div class="box">
+      <h4>Yelp Clone</h4>
+      <img src="C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\nomster.png" class="full-width" />
+      <p>
+        A Yelp clone that integrates with the Google Maps API
+        and includes features like user comments, star ratings,
+        image uploading, and user authentication.
+      </p>
+    </div>
+    <br class="clear" />
+
+    <div class="box">
+      <h4>Two-Sided Market Place</h4>
+      <img src="C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\flixter.png" class="full-width" />
+      <p>
+        A two-sided, video-streaming marketplace platform that
+        features credit card payment capabilities, user role
+        management, complex user interfaces, and advanced
+        database relationships.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Test Driven Development</h4>
+      <img src="C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\grammable.png" class="full-width" />
+      <p>
+        An Instagram clone that was built using industry-standard, test-driven
+        development following numerous red/green/refactor cycles.
+      </p>
+    </div>
+    <br class="clear" />
+    <div class="box">
+      <h4>Single Page Todo Application</h4>
+      <img src="C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\todoster.png" class="full-width" />
+      <p>
+        This single-page to-do application features a
+        fluid user interface that– by using JavaScript–
+        allows users to rapidly add dynamic content.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Agile Team Project</h4>
+      <img src="C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\chess.png" class="full-width" />
+      <p>
+        Worked on an Agile software development team building
+        a chess application. Under the guidance of a senior software engineer,
+        we had weekly Agile team meetings for code reviews, sprint planning,
+        and feature assignments.
+      </p>
+    </div>
+    <br class="clear" />
+	
+
+	<h3>Skills &amp; Tools</h3>
+	<hr class="green">
+	<p class = "skills-and-tools">
+		Gabriel has developed proficiency and expertise
+		in the following programming languages and
+		comfort with the following tools.
+	</p>
+
+	<div class = "icons">
+	<img src="C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\github.png" class ="icon">
+	<img src="C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\rubocop.png" class ="icon" />
+    <img src="C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\trello.png" class ="icon" />
+    <img src="C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\slack.png" class ="icon" />
+    <img src="C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\codeship.png" class ="icon" />
+
+    <br class = "clear">
+    <img src="C:\Users\ochoa\Desktop\The Firehose Project\Pre Course\pics\skills.png" class ="icon">
+
+    </div>
+
+    <div class = "contact-me">
+
+    	<h3 class = "contact-headline">Contact</h3>
+    	<hr class = "green">
+    	
+    	<p class = "contact-info">
+    		Currently entertaining new opportunities.<br>
+    		please get in touch via email:
+    	</p>
+    	<p>
+    		<a href = "Mailto: gochoa5190@gmail.com" class = "contact-link">
+    			gochoa5190@gmail.com
+    		</a>
+    	</p>
+
+    </div>
+
 </body>
+	
 </html>
