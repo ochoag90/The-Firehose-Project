@@ -9,17 +9,23 @@ body
 }
 
 h1 {
-	color: #d66e28;
+	color: #222672;
 	font-size:50px;
+	font-weight: normal;
+	margin-bottom: 0;
+	margin-top: 0;
+	border-color: 
 }
 
 h2 {
-	color: #d66e28;
+	color: #222672;
 	font-size: 18px;
+	margin-top: 0;
 }
 
 .bio {
 	color: #f9f5a4;
+	font-size: 14px;
 }
 
 .me {
@@ -31,9 +37,17 @@ h2 {
 	margin-top: 40px;
 }
 
-.about{
+.about {
 	width: 400px;
 	margin-left:auto;
 	margin-right: auto;
 	text-align:center;
+}
+
+.grey {
+	height: 7px;
+	background-color: #ffffff;
+	border:none;
+	width: 50px;
+	margin-top: 0;
 }
